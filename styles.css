@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", "Pretendard", system-ui, -apple-system, Segoe UI,
+        Roboto, Arial, sans-serif;
+    overflow-x: hidden;
+    background: #eef3f7;
+    color: #080e29;
+    padding-top: 80px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #eef3f7;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.head {
+    width: 100%;
+    max-width: var(--maxw);
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.logo-header {
+    color: #375aed;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: baseline;
+}
+
+.logo-header .reg {
+    font-size: 0.55em;
+    position: relative;
+    top: -0.7em;
+    margin-left: 4px;
+    font-weight: 300;
+}
+
+.main-nav {
+    display: flex;
+    gap: 36px;
+}
+
+.main-nav a {
+    color: #375aed;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    transition: color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: #080e29;
+}
+
+.main-nav a.active,
+.main-nav a[aria-current="page"] {
+    color: #375aed;
+    box-shadow: inset 0 -2px 0 #375aed;
+}
+
+.header a {
+    text-decoration: none !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+}
+.main-nav a.active,
+.main-nav a[aria-current="page"] {
+    box-shadow: none !important;
+}
+
+.main {
+    background-color: #375aed;
+    color: #080e29;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.reg {
+    font-size: 0.45em;
+    position: relative;
+    top: -0.9em; /* 👈 이 부분으로 위로 올림 */
+    margin-left: 6px;
+    font-weight: 400;
+}
+
+.top-section {
+    font-size: 240px;
+    font-weight: 800;
+    color: #eef3f7;
+    margin-bottom: 15px;
+}
+.text {
+    font-size: 25px;
+    color: #eef3f7;
+}
+
+.intro {
+    padding-top: 400px;
+    padding-bottom: 400px;
+    background: url("aa.png");
+    background: linear-gradient(
+            rgba(238, 243, 247, 0.5),
+            rgba(238, 243, 247, 0.5)
+        ),
+        url("aa.png") center/cover no-repeat;
+}
+
+.title {
+    margin-left: 80px;
+    font-size: 40px;
+    color: #375aed;
+}
+
+.desc {
+    margin-left: 80px;
+    margin-top: 50px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.content1 {
+    width: 100%;
+    height: 740px;
+    background-color: #eef3f7;
+    display: flex;
+    overflow: hidden;
+}
+.content_left {
+    width: 100%;
+    height: 100%;
+    background-color: #375aed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.content_right {
+    width: 0;
+    height: 100%;
+    padding: 90px 0 0 60px;
+    background-color: #eef3f7;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.content1:hover .content_right {
+    width: 50%;
+}
+.content_right h3,
+.content_right p {
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+.content1:hover .content_right > h3,
+.content1:hover .content_right > p {
+    opacity: 1;
+}
+.content1:hover .content_left {
+    width: 50%;
+}
+
+.text_wrap h2 {
+    font-size: 90px;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+.text_wrap h2 span {
+    font-weight: 300;
+    font-size: 40px;
+    position: absolute;
+    top: -5px;
+    color: #eef3f7;
+}
+.text_wrap p {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+    padding-left: 12px;
+    color: #eef3f7;
+}
+
+.content_right h3 {
+    font-size: 30px;
+    line-height: 34px;
+    color: #080e29;
+}
+.main_text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 4px 0;
+    color: #080e29;
+}
+
+.box_wrap {
+    position: relative;
+    width: 93%;
+    height: 42%;
+    margin-top: 0;
+}
+.keyword {
+    padding: 30px 60px;
+    width: auto;
+    position: absolute;
+    background-color: #375aed;
+    font-size: 24px;
+    color: #ffffff;
+    border-radius: 60px;
+    transition: 0.5s;
+}
+.keyword:hover {
+    box-shadow: 0 0 20px #375aed;
+    scale: 1.05;
+    cursor: pointer;
+}
+.item2 {
+    bottom: 0;
+    right: 24.5%;
+}
+.item1 {
+    bottom: 15%;
+    left: 22%;
+    transform: rotate(40deg);
+}
+.item3 {
+    bottom: 8%;
+    left: 5%;
+    transform: rotate(-10deg);
+}
+.item4 {
+    bottom: 35.5%;
+    right: 40%;
+    transform: rotate(16deg);
+}
+.item5 {
+    bottom: 11.5%;
+    right: 4.3%;
+    transform: rotate(33deg);
+}
+.content_left {
+    background-size: cover;
+}
+
+.sub_title {
+    color: #375aed;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 7px;
+    margin-bottom: 30px;
+}
+
+.footer {
+    margin-top: auto;
+}
+.footer__card {
+    width: 100%;
+    background: #375aed;
+    color: #eef3f7;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 56px 80px 84px;
+    box-sizing: border-box;
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer__wordmark {
+    display: inline-flex;
+    align-items: flex-start;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: -0.3px;
+    color: #375aed;
+    text-decoration: none;
+}
+.footer__reg {
+    margin-left: 6px;
+    transform: translateY(-0.38em);
+    font-size: 0.55em;
+    font-weight: 300;
+    opacity: 0.95;
+    line-height: 1;
+}
+.footer__tagline {
+    font-size: 14px;
+    color: #375aed;
+    opacity: 0.95;
+}
+
+.header .logo-header {
+    color: #375aed;
+}
+.header .logo-header:hover {
+    color: #080e29;
+}
+.header .main-nav a {
+    color: #375aed;
+}
+.header .main-nav a:hover {
+    color: #080e29;
+}
+
+.footer {
+    background: #eef3f7;
+    margin-top: auto;
+}
+.footer__card {
+    position: relative;
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    background: #eef3f7;
+    color: #375aed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 56px 80px 120px;
+    box-sizing: border-box;
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer__wordmark {
+    display: inline-flex;
+    align-items: flex-start;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: -0.3px;
+    color: #375aed;
+    text-decoration: none;
+}
+.footer__reg {
+    margin-left: 6px;
+    transform: translateY(-0.38em);
+    font-size: 0.55em;
+    font-weight: 300;
+    opacity: 0.95;
+    line-height: 1;
+}
+.footer__tagline {
+    font-size: 14px;
+    opacity: 0.95;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 연락처 */
+.footer__contact {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    text-align: right;
+}
+.footer__contact-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.footer__contact-list {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.footer__contact-list a {
+    color: #375aed;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.95;
+    transition: opacity 0.25s ease;
+}
+.footer__contact-list a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+.footer__address {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer__copy {
+    position: absolute;
+    left: 80px;
+    bottom: 20px;
+    font-size: 13px;
+    color: #375aed;
+    opacity: 0.8;
+    margin: 0;
+}
